@@ -1,16 +1,12 @@
-const btnFiltrarLivrosDeFront = document.getElementById("btnFiltrarLivrosFront");
 
-btnFiltrarLivrosDeFront.addEventListener("click", filtrarLivrosDeFront);
+const botoes = document.querySelectorAll(".btn")
 
-function filtrarLivrosDeFront() {
-    let livrosFiltrados = livros.filter(livro => livro.categoria === "front-end")
-
-    console.table(livrosFiltrados)
-}
-
-
-
-
+botoes.forEach(btn => {
+    btn.addEventListener("click", () => {
+        let livrosFiltrados =  livros.filter(livro => livro.categoria === btn.value)  
+        console.table(livrosFiltrados)
+    })
+});
 
 
 
